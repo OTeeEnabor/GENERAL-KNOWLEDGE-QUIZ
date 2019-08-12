@@ -1,0 +1,8 @@
+/*Styling for the landing page of the quiz*/
+/* font-family: 'Rubik Mono One', sans-serif; */
+
+#firstPageBody{
+    background-image:url(/images/open-spiral-notebook-1405082_1920.png);
+    background-position: center;
+    background-size: contain;
+}
