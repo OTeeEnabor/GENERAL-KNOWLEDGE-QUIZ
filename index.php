@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/quizstylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/quizstylesheet.css">
 
     <title>CodeSpace General Knowledge Quiz</title>
 </head>
 <body id = "firstPageBody">
+<main>
+
+    <h1 id="heading1">General Knowledge Quiz</h1>
 
 
+</main>
     
 </body>
 </html>

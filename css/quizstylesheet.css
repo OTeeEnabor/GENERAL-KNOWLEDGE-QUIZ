@@ -2,7 +2,13 @@
 /* font-family: 'Rubik Mono One', sans-serif; */
 
 #firstPageBody{
-    background-image:url(/images/open-spiral-notebook-1405082_1920.png);
+    background-colour:green;
+    /* background-image:url(/images/open-spiral-notebook-1405082_1920.png);
     background-position: center;
-    background-size: contain;
+    background-size: contain; */
+}
+#heading1{
+    font-family: 'Rubik Mono One', sans-serif;
+    text-transform:uppercase;
+    text-align:center;
 }
