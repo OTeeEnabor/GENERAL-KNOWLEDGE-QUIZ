@@ -16,12 +16,58 @@
 
 <?php
 
-# load the quiz questions and choices into an array of arrays
+# load the quiz questions and choices into an array of arrays. 
+// function{
+
+// }
+$filename_q = "questions.txt";
+$filename_a = "answers.txt";
+
+#loads a text file which has the questions and choices into an array.
+
+#this returns array of answers if the filename is found in the directory
+function loadAnswer($filename){
+    if (file_exists($filename)){
+        $answer_array =file($filename);
+    }
+    else{
+        echo "Error file does not exist.";
+    }
+    return $answer_array;
+}
+#this function returns an array of arrays with questions and answers if the file name in the directory. 
+#The is a 2 dimensional array with the first element in the array = question and the second = answer.
+function loadQuestions($filename){
+    if(file_exists($filename)){
+        $questionsA = file($filename);
+    }
+    else{echo"Error file does not exist";}
+    return $questionsA;
+}
+
+#this function will sepererate the array of arrays into an array of questions and array of answers. 
+
+$QA_array = file($filename_q);
+#load answers text file into an array.
+$answers_array = file($filename_a);
+
+#create an array that has only the questions
+$question_only =array();
+
+foreach($QA_array as $key => $value){
+    $question_only[]=explode(':',$value);
+}
+var_dump($question_only);
+var_dump($QA_array);
+var_dump($answers_array);
+
+
 
 
 
 ?>
 <!--PHP code ends here--->
+
 <!--Main Section Starts Here-->
     <main>
         <div class=''>

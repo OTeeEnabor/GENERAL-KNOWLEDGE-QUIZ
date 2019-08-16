@@ -1,0 +1,20 @@
+1.which country won the 2018 FIFA Men's World Cup? : A)France ,B) South Africa, C) Germany , D)Russia
+2. Which country won the 2019 FIFA Women's World Cup?: A)China,B)United States of America, C)Japan, D)France
+3. Who are the current UEFA Champions League champions?:A)Real Madrid,B)AC Milan,C)Liverpool,D)Arsenal
+4. Who won the 1996 African Nations Cup?: A)Nigeria, B)Ghana, C)Japan,D)South Africa
+5. Who was the first democratically elected president in SA?: A)Nelson Mandela, B)Julius Malema, C)Hendrik Verwoed, D)Jacob Zuma
+6. When did South Africa gain independence?: A)1934, B)1960, C)1994, D)1998
+7. How many provinces are there in South Africa?: A)10, B)2, C)3, D)9
+8. Which city has 1 of the 7 world wonders?: A)Cape Town, B)Johanneburg, C)Durban, D)Polokwane
+9. Who invented the internet?: A)Steve Jobs, B)Elon Musk,C)Bill Gates, D)Tim Berners-Lee
+10. What renders a web page on a device?:A)Server,B)IP Address,C)Browser,D)URL
+11. Which of the following languages is a Markup language?: A)C#,B)MATLAB,C)Python,D)HTML
+12. What does the acronym DOM stand for?:A)Double Object Markup, B)Deep Ordered Machine,C)Daily Organisation Model, D)Document Object Model
+13. What is the capital of Nepal?:A)Seoul, B)Tokyo, C)Manilla, D)Kathmandu
+14. Which country is Mount Kilimanjaro in?:A)Kenya, B)Namibia,C)Uganda, D)Zimbabwe
+15. How many continents does Russia span?: A)2, B)3, C)4, D)5
+16. How many countries are there in Africa?: A)54, B)20, C)40,D)68
+17. Who is the current president of the USA?: A)Barrack Obama, B)Hillary Clinton, C)Jacob Nixon, D)Donald Trump
+18. Who in the Bible parted the red sea?: A)Daniel, B)Moses, C)Eve, D)Job
+19. Which of these is not a high level language? : A)C#, B)Python, C)PHP, D)Javascript
+20. What serves a browser a web page?: A) Computer Waiter, B) DOM , C) Web Server, D) IP Address
