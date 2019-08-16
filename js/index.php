@@ -9,12 +9,11 @@
 
     <title>CodeSpace General Knowledge Quiz</title>
 </head>
-<body id = "firstPageBody">
-<main>
-
+<body >
+<main id = "firstPageBody">
     <h1 id="heading1">General Knowledge Quiz</h1>
-
-
+    <img src ="/wamp64/www/CodeSpace/GENERAL-KNOWLEDGE-QUIZ/images/Ozymandias-by-Jimm-Lee.jpg">
+    <!-- "C:\wamp64\www\CodeSpace\GENERAL-KNOWLEDGE-QUIZ\images\open-spiral-notebook-1405082_1920.png" -->
 </main>
     
 </body>

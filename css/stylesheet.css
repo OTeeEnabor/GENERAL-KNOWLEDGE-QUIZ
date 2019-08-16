@@ -1,0 +1,102 @@
+/*Styling for the landing page of the quiz*/
+/* font-family: 'Rubik Mono One', sans-serif; */
+
+*{
+    box-sizing:border-box;
+}
+#firstPageBody{
+    background-image:url(../images/open-spiral-notebook-1405082_1920.png);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.intro-container{
+    margin: 1rem 2rem 1rem;
+}
+#introPara{
+    font-weight: bold;
+    color:black;
+    text-align: center;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+#heading1{
+    font-family: 'Caveat Brush', cursive;
+    color:blue;
+    text-align:center;
+    text-transform: uppercase;
+    margin:6rem  2rem 1rem;
+
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .intro-container{
+        margin: 1rem 2rem 1rem;
+    }
+    #introPara{
+    }
+    #introPara2{
+        margin:1rem 5rem 1rem;
+    }
+
+    button{
+        text-align:center;
+        margin: 1rem 15rem 1rem
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {...}  */
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    #heading1{
+        font-size:;
+    }
+
+    .intro-container{
+        margin: 1rem 2rem 1rem;
+    
+    }
+    #introPara{
+
+    }
+    #introPara2{
+        color:black;
+        text-align: center;
+        margin:1rem 5rem 1rem;
+    }
+    button{
+        text-align:center;
+        margin: 1rem 15rem 1rem
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+
+    #heading1{
+        font-size:3.5rem;
+    }
+
+    .intro-container{
+        margin: 5rem 2rem 1rem;
+    }
+    #introPara{
+        font-size:2rem;
+    }
+    #introPara2{
+        color:black;
+        text-align: center;
+        margin:1rem 5rem 1rem;
+    }
+    button{
+        text-align:center;
+        margin: 1rem 15rem 1rem
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
