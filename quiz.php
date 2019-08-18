@@ -14,7 +14,7 @@
     
     <title>QUIZ</title>
 </head>
-<body class ="page-body">
+<body>
 
 <!--PHP Code starts here -->
 
@@ -58,8 +58,13 @@ function showQuestions($questionsA){
     foreach($questionsA as $key => $value){
 
         #show the question
+        echo <<<END
 
-        echo "<br><b>$value[0]</b><br>";
+        <br>
+        <div class ="question-style">
+        <b>$value[0]</b>
+        </div>
+END;
 
         #store choices of each question into a choice array
          $option = explode(",",$value[1]);
@@ -68,9 +73,11 @@ function showQuestions($questionsA){
         //Take the first element in the choice array, i.e the letters corresponding to each choice.
                 $choice_value = substr(trim($value),0,1);
 
-                echo "<input type=\"radio\" name=\"$key\" 
-
-                value=\"$choice_value\">$value</input><br>";
+                echo <<<END
+                
+                 <input class="question-option-style" type="radio" name="$key" 
+                value="$choice_value">$value</input><br>
+END;
             }
     }
 }

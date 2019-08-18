@@ -7,6 +7,8 @@
     <title>CodeSpace Results</title>
 </head>
 <body>
-    
+    <?php
+    //The results from the quiz page will be sent to this page
+    ?>
 </body>
 </html>
