@@ -36,10 +36,14 @@ function loadAnswer($filename){
 
 #The is a 2 dimensional array with the first element in the array = question and the second element = answer.
 function loadQuestions($filename){
+    //this array will store the 20 questions. 
     $questionsOnly =array();
+    //Check if the file exists if it does store the file contents into an array.
     if(file_exists($filename)){
+    //Array of file content.
         $questionsA = file($filename);
 
+//Seperate the questions and store them into an array
         foreach($questionsA as $key => $value){
             $questionsOnly[] = explode(":",$value);
         }
@@ -48,28 +52,56 @@ function loadQuestions($filename){
     return $questionsOnly;
 }
 
-#create a function that seperates the questions and stores the choices into a seperate arrray.
-
+#create a function that will show each question, and store the choices into an array.
 function showQuestions($questionsA){
+
     foreach($questionsA as $key => $value){
+
         #show the question
 
         echo "<br><b>$value[0]</b><br>";
 
         #store choices of each question into a choice array
          $option = explode(",",$value[1]);
+
             foreach($option as $value){
+        //Take the first element in the choice array, i.e the letters corresponding to each choice.
                 $choice_value = substr(trim($value),0,1);
 
-                echo"<input type=\"radio\" name=\"$key\" value=\"$choice_value\">$value</input><br>";
+                echo "<input type=\"radio\" name=\"$key\" 
+
+                value=\"$choice_value\">$value</input><br>";
             }
     }
-// return $option;
 }
 
-## A function to grade the quiz
+//Grade the quiz once the submit button is clicked.
 
+if(isset($_POST['submitquiz'])){
+    //load the textfile that has the answers. 
+    $answer_array = loadAnswer($filename_a);
+    //Number of answers
+    $answer_count = count($answer_array);
+    //initialize the variable that will count the number of correct answers. 
+    $count_correct = 0;
+    //loop through the answer file and compare it with the answers submitted by the quiz taker. 
+    foreach($answer_array as $key => $correct_answer){
+        // var_dump(rtrim($correct_answer));
+
+        if(isset($_POST[$key])){
+
+            if (strtoupper(rtrim($correct_answer)) == strtoupper($_POST[$key])){
+                $count_correct++;
+            }
+        }
+    }
+    echo "<br>Total number of correct answers: $count_correct";
+    // var_dump(array_keys($answer_array));
+}
+
+# A function to grade the quiz 
 function gradeQuiz($quizResult){
+
     if ($quizResult  < 10){
         echo "You got $quizResult out of 20 <br>";
         echo "You can improve your quiz result. Try again.";
@@ -81,15 +113,12 @@ function gradeQuiz($quizResult){
     }
 
     else{
-        echo "Well done, you got $quizResult out of 20 <br>";  
+        echo "Well done, you got $quizResult out of 20 <br>"; 
     }
-
 }
 
 ?>
-<?php
 
-?>
 <!--PHP code ends here--->
 
 <!--Main Section Starts Here-->
@@ -112,42 +141,14 @@ function gradeQuiz($quizResult){
 
         $loadedQuestions = loadQuestions($filename_q);
         showQuestions($loadedQuestions);
+        
+        
 ?>
-
+        <br>
         <input type="submit" name="submitquiz" value="Submit Quiz"/>
 
 <!--END OF FORM HERE-->   
-
-<?php
-//Grade the quiz once the submit button is clicked.
-
-if(isset($_POST['submitquiz'])){
-
-    //load the textfile that has the answers. 
-    $answer_array = loadAnswer($filename_a);
-    //Number of answers
-    $answer_count = count($answer_array);
-    //initialize the variable that will count the number of correct answers. 
-    $count_correct = 0;
-
-    //loop through the answer file and compare it with the answers submitted by the quiz taker. 
-
-    foreach($answer_array as $key =>$correct_answer){
-
-        if(isset($_POST[$key])){
-
-            if ($correct_answer == $_POST[$key]){
-
-                $count_correct++;
-            }
-        }
-    }
-
-    echo "<br>Total number of correct answers: $count_correct";
-}
-
-?>
-        
+     
     </main>
    <!--Bootstrap JS pluggins--> 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

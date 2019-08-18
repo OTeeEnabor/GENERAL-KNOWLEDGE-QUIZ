@@ -17,4 +17,4 @@
 17. Who is the current president of the USA?: A)Barrack Obama, B)Hillary Clinton, C)Jacob Nixon, D)Donald Trump
 18. Who in the Bible parted the red sea?: A)Daniel, B)Moses, C)Eve, D)Job
 19. Which of these is not a high level language? : A)C#, B)Python, C)PHP, D)Javascript
-20. What serves a browser a web page?: A) Computer Waiter, B) DOM , C) Web Server, D) IP Address
+20. What serves a browser a web page?: A)Computer Waiter, B)DOM , C)Web Server, D)IP Address
