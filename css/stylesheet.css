@@ -77,15 +77,15 @@
 /*Styling for the Quiz Page*/
 .quiz-body{
     background-image:url(../images/quiz-background.jpg);
-    background-size: cover;
-    background-repeat:no-repeat;
+    background-size: contain;
+    background-repeat:repeat;
 }
 .question-style{
     font-family: 'Share Tech Mono', monospace;
     font-size:1.5rem;
-    text-align: center;
+    text-align: left;
     font-weight:bold;
-    background-color:rgb(161, 161, 224);
+    background-color:#6f5a51;
     color:seashell;
     padding-top:20px;
     padding-bottom:20px;
