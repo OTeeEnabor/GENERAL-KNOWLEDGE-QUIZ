@@ -12,9 +12,9 @@
     <!--Custom Stylesheet-->
     <link href="css/stylesheet.css"rel="stylesheet" type="text/css" >
     
-    <title>QUIZ</title>
+    <title>Code Space QUIZ 2019</title>
 </head>
-<body>
+<body class="quiz-body">
 
 <!--PHP Code starts here -->
 
@@ -76,7 +76,9 @@ END;
                 echo <<<END
                 
                  <input class="question-option-style" type="radio" name="$key" 
-                value="$choice_value">$value</input><br>
+                value="$choice_value">$value</input>
+                <span class="checkmark"></span>
+                <br>
 END;
             }
     }
