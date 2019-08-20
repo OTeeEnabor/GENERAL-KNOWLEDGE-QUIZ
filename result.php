@@ -9,6 +9,8 @@
 <body>
     <?php
     //The results from the quiz page will be sent to this page
+    include 'quiz.php';
+    echo $grade;
     
     ?>
 

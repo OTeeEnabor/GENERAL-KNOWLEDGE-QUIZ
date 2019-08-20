@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <!--Bootstrap CSS-->
@@ -148,17 +147,20 @@ END;
         </div>
 
 <!--START OF FORM HERE-->        
-        <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+    <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
 <?php
 
-        $loadedQuestions = loadQuestions($filename_q);
-        showQuestions($loadedQuestions);
+    $loadedQuestions = loadQuestions($filename_q);
+    showQuestions($loadedQuestions);
+    $grade = gradeQuiz($count_correct)
          
 ?>
-        <br>
-        <input type="submit" name="submitquiz" value="Submit Quiz"/>
-       <?php $grade = gradeQuiz($count_correct);
-       ?>
+    <br>
+    <input type="submit" name="submitquiz" value="Submit Quiz"/>
+
+<?php 
+$grade = gradeQuiz($count_correct);
+?>
 <!--END OF FORM HERE-->   
      
     </main>

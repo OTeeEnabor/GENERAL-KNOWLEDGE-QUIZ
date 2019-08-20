@@ -124,11 +124,13 @@ input {
 /*End of styling for the quiz page*/
 
 
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 600px and down) */ 
+ @media only screen and (max-width: 600px) {
+
     .intro-container{
         margin: 1rem 2rem 1rem;
     }
+
     #introPara{
     }
     #introPara2{
@@ -139,7 +141,13 @@ input {
         text-align:center;
         margin: 1rem 15rem 1rem
     }
-}  */
+    .quiz-heading-1{
+
+        font-size:px;
+        
+    }
+
+} 
 
 /* Small devices (portrait tablets and large phones, 600px and up)
 @media only screen and (min-width: 600px) {...}  */
