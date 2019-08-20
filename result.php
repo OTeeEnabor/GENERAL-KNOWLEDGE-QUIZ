@@ -126,7 +126,11 @@ function gradeQuiz($quizResult){
             You can improve your quiz result. Try again.
             </p>
 
-            <a class="quiz-redo btn bg-primary" href ="quiz.php"> Try Again</a>
+            <div class="quiz-image-reaction-container">
+            <img src="images/sad-face.png" alt="lol you can do it">
+            </div>
+
+            <a class="quiz-redo btn bg-primary" href ="quiz.php"> Try Again :)</a>
         </div>
         
 END;
@@ -142,7 +146,10 @@ END;
         <p>
         Would you like to try again??
         </p>
-        <a class="quiz-redo btn" href ="quiz.php"> Try Again</a>
+        <div class="quiz-image-reaction-container">
+            <img src="images/clever-face-edit.jpg" alt="lol you can do it">
+            </div>
+        <a class="quiz-redo btn" href ="quiz.php">Improve your score?</a>
         </div>
         
         
@@ -155,6 +162,10 @@ END;
         <p>
         Well done, you got $quizResult out of 20 <br>
         </p>
+        <div class="quiz-image-reaction-container">
+            <img src="images/cool-face-edit.jpg" alt="lol you can do it">
+        </div>
+
         </div>
         
 
