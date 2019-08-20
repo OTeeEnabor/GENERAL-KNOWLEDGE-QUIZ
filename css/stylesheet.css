@@ -85,6 +85,7 @@
 .quiz-body{
     background-image:url(../images/quiz-background.jpg);
     background-size: contain;
+    
     background-repeat:repeat;
 }
 .question-style{
@@ -110,6 +111,21 @@ input {
     font-weight: bolder;
     color:#ffe3c0;
 }
+
+.quiz-submit-button{
+    background-color: #6f5a51; 
+    border: none;
+    font-family: 'Finger Paint', cursive;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+
+
+}
 .checkmark {
     /* position: absolute;
     top: 0;
@@ -122,6 +138,32 @@ input {
   
 
 /*End of styling for the quiz page*/
+
+/*RESULTS STYLING*/
+.quiz-results-body{
+    background-image:url(../images/open-spiral-notebook-1405082_1920.png);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.results-container{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size:1rem;
+    text-align: center;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+
+}
+.quiz-redo{
+
+}
+.quiz-image-reaction-container{
+    
+}
+/*END OF RESULTS STYLING*/
 
 
 /* Extra small devices (phones, 600px and down) */ 

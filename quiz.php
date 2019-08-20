@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +19,6 @@
 <body class="quiz-body">
 
 <!--PHP Code starts here -->
-
 <?php
 $filename_q = "questions.txt";
 $filename_a = "answers.txt";
@@ -98,13 +100,15 @@ if(isset($_POST['submitquiz'])){
         // var_dump(rtrim($correct_answer));
 
         if(isset($_POST[$key])){
-
-            if (strtoupper(rtrim($correct_answer)) == strtoupper($_POST[$key])){
+             if (strtoupper(rtrim($correct_answer)) == strtoupper($_POST[$key])){
                 $count_correct++;
+            }
+            else{
+                $incorrect_answer =array();
+                $incorrect_answers[] = strtoupper($_POST[$key]);
             }
         }
     }
-    // var_dump(array_keys($answer_array));
 }
 
 # A function to grade the quiz 
@@ -147,19 +151,24 @@ END;
         </div>
 
 <!--START OF FORM HERE-->        
-    <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-<?php
 
+    <form method="POST" action="result.php">
+<?php
+//action=" echo $_SERVER["PHP_SELF"];
     $loadedQuestions = loadQuestions($filename_q);
     showQuestions($loadedQuestions);
-    $grade = gradeQuiz($count_correct)
+
+// Set session variables
+// $_SESSION["quiz-result"] = $count_correct;
+// $grade = gradeQuiz($count_correct);
          
 ?>
     <br>
-    <input type="submit" name="submitquiz" value="Submit Quiz"/>
+    <input class = "quiz-submit-button" type="submit" name="submitquiz" value="Submit Quiz"/>
 
 <?php 
-$grade = gradeQuiz($count_correct);
+$_SESSION["quiz-result"] = $count_correct;
+// $grade = gradeQuiz($count_correct);
 ?>
 <!--END OF FORM HERE-->   
      
