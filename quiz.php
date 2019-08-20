@@ -62,11 +62,13 @@ function showQuestions($questionsA){
 
         <br>
         <div class ="question-style">
+
         <b>$value[0]</b>
+
         </div>
 END;
 
-        #store choices of each question into a choice array
+        //Store choices of each question into a choice array
          $option = explode(",",$value[1]);
 
             foreach($option as $value){
@@ -75,9 +77,9 @@ END;
 
                 echo <<<END
                 
-                 <input class="question-option-style" type="radio" name="$key" 
-                value="$choice_value">$value</input>
-                <span class="checkmark"></span>
+                 <input type="radio" name="$key" 
+                value="$choice_value"></input>
+                <span class="question-option-style">$value</span>
                 <br>
 END;
             }
@@ -85,7 +87,6 @@ END;
 }
 
 //Grade the quiz once the submit button is clicked.
-
 if(isset($_POST['submitquiz'])){
     //load the textfile that has the answers. 
     $answer_array = loadAnswer($filename_a);
@@ -104,7 +105,6 @@ if(isset($_POST['submitquiz'])){
             }
         }
     }
-    echo "<br>Total number of correct answers: $count_correct";
     // var_dump(array_keys($answer_array));
 }
 
@@ -112,7 +112,10 @@ if(isset($_POST['submitquiz'])){
 function gradeQuiz($quizResult){
 
     if ($quizResult  < 10){
-        echo "You got $quizResult out of 20 <br>";
+        echo <<<END
+        <div
+        "You got $quizResult out of 20 <br>"
+END;
         echo "You can improve your quiz result. Try again.";
         #Reload the quiz
     }
@@ -136,7 +139,7 @@ function gradeQuiz($quizResult){
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                    <h1 id="heading1">
+                    <h1 class="quiz-heading-1">
                 CodeSpace General Knowledge Quiz
                 </h1> 
                     </div>
@@ -150,12 +153,12 @@ function gradeQuiz($quizResult){
 
         $loadedQuestions = loadQuestions($filename_q);
         showQuestions($loadedQuestions);
-        
-        
+         
 ?>
         <br>
         <input type="submit" name="submitquiz" value="Submit Quiz"/>
-
+       <?php $grade = gradeQuiz($count_correct);
+       ?>
 <!--END OF FORM HERE-->   
      
     </main>
