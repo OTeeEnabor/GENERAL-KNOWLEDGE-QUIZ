@@ -75,13 +75,21 @@
 
 
 /*Styling for the Quiz Page*/
+.quiz-heading-1{
+    color:rgb(174, 174, 219);
+    font-family: 'Finger Paint', cursive;
+    font-weight: bolder;
+    text-transform:uppercase;
+    
+}
 .quiz-body{
     background-image:url(../images/quiz-background.jpg);
     background-size: contain;
     background-repeat:repeat;
 }
 .question-style{
-    font-family: 'Share Tech Mono', monospace;
+    padding-left:10px;
+    font-family: 'Finger Paint', cursive;
     font-size:1.5rem;
     text-align: left;
     font-weight:bold;
@@ -92,13 +100,15 @@
 }
 
 input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
+    margin-left: 10px;
+    display: inline-block;
+  } 
 .question-option-style{
     margin: 10px auto 15px;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Finger Paint', cursive;
+    font-size:1rem;
+    font-weight: bolder;
+    color:#ffe3c0;
 }
 .checkmark {
     /* position: absolute;
