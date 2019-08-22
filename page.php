@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                    <h1>CodeSpace General Knowledge Quiz</h1>
+                    <h1 class="heading-1">CodeSpace General Knowledge Quiz</h1>
                     <div class="intro-container text-center">
                         <p id="introPara">
                             Good day, genius!!!
