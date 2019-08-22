@@ -77,10 +77,11 @@ END;
                 $choice_value = substr(trim($value),0,1);
 
                 echo <<<END
-                
+                <label>
                  <input type="radio" name="$key" 
                 value="$choice_value"></input>
                 <span class="question-option-style">$value</span>
+                </label>
                 <br>
 END;
             }
@@ -165,11 +166,6 @@ END;
 ?>
     <br>
     <input class = "quiz-submit-button" type="submit" name="submitquiz" value="Submit Quiz"/>
-
-<?php 
-$_SESSION["quiz-result"] = $count_correct;
-// $grade = gradeQuiz($count_correct);
-?>
 <!--END OF FORM HERE-->   
      
     </main>
